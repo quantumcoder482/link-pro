@@ -1,0 +1,224 @@
+
+.guest_home {
+    width: 100%;
+    float:left;
+    background: $white;
+
+    .video_wrap {
+        width: 100%;
+        display: block;
+        float: left;
+        padding-bottom: 56.25%;
+        height: 0;
+        position: relative;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    section {
+        width: 100%;
+        float: left;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        @media all and (max-width: 768px) {
+            display: block;
+        }
+
+        p {
+            @media all and (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        &.two_col {
+            padding: 40px 0;
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            &.top {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                align-items: center;
+                -webkit-align-items: center;
+                padding: 20px 5%;
+
+                @media all and (max-width: 768px) {
+                    display: block;
+                }
+
+                h2 {
+                    @include oslight;
+                    font-size: 56px;
+                    margin: 0;
+
+                    @media all and (max-width: 1199px) {
+                        font-size: 4.5vw;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 7vw;
+                    }
+                }
+
+                h3 {
+                    font-size: 55px;
+
+                    @media all and (max-width: 1199px) {
+                        font-size: 4.4vw;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 6.9vw;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                .button {
+                    width: 300px;
+                    padding: 18px 10px;
+                    text-transform: uppercase;
+                    display: block;
+                    margin: 20px 0 10px;
+
+                    @media all and (max-width: 768px) {
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            .bottom_row {
+                p {
+                    @media all and (max-width: 768px) {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .col {
+                width: 50%;
+                float: left;
+
+                @media all and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+
+            &.social_media {
+                @media all and (max-width: 768px) {
+                    flex-direction: column-reverse;
+                    display: flex;
+                }
+
+                .col {
+                    padding-right: 10.5%;
+
+                    @media all and (max-width: 768px) {
+                        padding-left: 10.5%;
+                    }
+
+                    &.left {
+                        padding: 5% 10.5% 5% 0;
+
+                        .video_wrap {
+                            margin-left: -6%;
+                            padding-bottom: 70.25%;
+                        }
+
+                    }
+                }
+            }
+
+            &.laptop {
+
+                .col {
+                    padding-left: 9.5%;
+
+                    @media all and (max-width: 768px) {
+                        padding-right: 9.5%;
+                    }
+
+                    &.right {
+                        background: url('/images/circle-2.png') no-repeat;
+                        background-position: 165% center;
+                        background-size: contain;
+                        padding: 5% 9.5%;
+
+                    }
+                }
+            }
+
+            &.phone {
+                @media all and (max-width: 768px) {
+                    flex-direction: column-reverse;
+                    display: flex;
+                }
+
+                img {
+                    max-width: 500px;
+                }
+
+                .col {
+                    padding-right: 10.5%;
+
+                    @media all and (max-width: 768px) {
+                        padding-left: 10.5%;
+                    }
+
+                    &.left {
+                        background: url('/images/circle-3.png') no-repeat;
+                        background-position: -75% center;
+                        background-size: 60%;
+                        padding: 5% 10.5%;
+
+                    }
+                }
+            }
+        }
+
+        &.bottom {
+
+            .col {
+                padding-left: 9.5%;
+
+                @media all and (max-width: 768px) {
+                    padding-right: 9.5%;
+                }
+
+                &.right {
+                    background: url('/images/circle-4.png') no-repeat;
+                    background-position: 190% center;
+                    background-size: contain;
+                    padding: 5% 9.5%;
+                }
+            }
+        }
+    }
+}

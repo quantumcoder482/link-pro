@@ -1,0 +1,367 @@
+.form_page {
+
+    .pricing {
+        margin: 30px 0;
+        width: 100%;
+        text-align: center;
+
+        h3 {
+            @include osbold;
+            font-size: 50px;
+
+            @media all and (max-width: 1199px) {
+                font-size: 40px;
+            }
+
+            sup {
+                @include osregular;
+                font-size: 16px;
+                top: -30px;
+                left: 4px;
+
+                @media all and (max-width: 992px) {
+                    top: -24px;
+                }
+            }
+
+            span {
+                @include osregular;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &.plans {
+
+        h2 {
+            text-align: center;
+        }
+
+        .card {
+            max-width: 1200px;
+
+            &:has(.two_columns) {
+                max-width: 975px;
+            }
+
+            @media all and (max-width: 1199px) {
+                max-width: 1000px;
+            }
+
+            @media all and (max-width: 992px) {
+                max-width: 70%;
+            }
+
+            @media all and (max-width: 550px) {
+                max-width: 90%;
+            }
+        }
+
+        .sub_title {
+            @include ossemibold;
+            color: $blue;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        ul:not(.breadcrumb_list) {
+            list-style: none;
+            padding-left: 0;
+            margin: 0 auto;
+            min-height: 130px;
+
+            li {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                -webkit-justify-content: flex-start;
+                align-items: center;
+                -webkit-align-items: center;
+                margin-bottom: 10px;
+
+                p {
+                    margin: 0;
+                    text-align: left;
+                }
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .my_row {
+
+            &.three_columns, &.two_columns {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                justify-content: center;
+                -webkit-justify-content: center;
+                align-items: stretch;
+                -webkit-align-items: stretch;
+                column-gap: 25px;
+                -moz-column-gap: 25px;
+                -webkit-column-gap: 25px;
+
+                .column {
+                    width: 100%;
+                }
+            }
+
+            &.two_columns {
+               @include query(smallMobile) {
+                    flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+               }
+
+                .column {
+                    &:first-child {
+                        @include query(smallMobile) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+
+            &.three_columns {
+                @include query(tablet) {
+                    flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+                }
+
+                &.popup {
+                    .column.free {
+                        grid-column-end: unset;
+                    }
+                }
+
+                .column {
+                    @include query(tablet) {
+                        margin-bottom: 20px;
+                    }
+
+                    &:last-child {
+                        @include query(tablet) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .column {
+                @include columnStyle;
+
+                h4 {
+                    @include osbold;
+                    color: $black;
+                    text-align: center;
+                    /*margin-top: auto;*/
+                }
+
+                h5 {
+                    @include osbold;
+                }
+
+                input[type=email] {
+                    padding: 15px;
+
+                    @include query(mobile) {
+                        padding: 10px;
+                    }
+                }
+
+                &.update_info {
+                    .form_buttons {
+                        margin-top: auto;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .plan_name {
+                    position: relative;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    -webkit-align-items: center;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+                    height: 100%;
+
+                    p {
+                        @include osbold;
+                        position: absolute;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 28px;
+                        text-transform: uppercase;
+                        width: 100%;
+                        text-align: center;
+
+                        @media all and (max-width: 1199px) {
+                            font-size: 22px
+                        }
+                    }
+
+                    img {
+                        max-width: 210px;
+                    }
+                }
+
+                a:not(.button) {
+                    color: $red;
+                    text-align: center;
+
+                    &.cancel_link {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .other_methods {
+                    img {
+                        @media all and (max-width: 768px) {
+                            max-width: 200px;
+                        }
+                    }
+                }
+
+                form {
+                    height: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+
+                    label {
+                        font-size: 12px;
+
+                        span {
+                            font-size: 10px;
+                            color: $grayBlue;
+                        }
+                    }
+
+                    &.plan {
+                        height: auto;
+                        justify-content: flex-end;
+                    }
+                }
+
+                .canceled_text {
+                    p {
+                        color: $red;
+
+                        span {
+                            @include ossemibold;
+                        }
+                    }
+                }
+
+                &.pro {
+
+                    svg {
+                        color: $blue;
+                    }
+                }
+
+                &.premier {
+                    border-color: $black;
+
+                    svg {
+                        color: $black;
+                    }
+                }
+
+                &.custom {
+                    border-color: $grayBlue;
+
+                    svg {
+                        color: $grayBlue;
+                    }
+                }
+            }
+        }
+
+        .column.free {
+            width: 100%;
+            border-color: $limeGreen;
+
+            &.plans_page {
+                margin-top: 3%;
+
+                @media all and (max-width: 992px) {
+                    margin-top: 20px;
+                }
+            }
+
+            .my_row.three_columns {
+                grid-template-columns: repeat(3, 1fr);
+
+                @media all and (max-width: 768px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .column {
+                    padding: 0;
+                    border: none;
+                    justify-content: flex-start;
+                    -webkit-justify-content: flex-start;
+                    text-align: left;
+
+                    @include query(tablet) {
+                        text-align: center;
+                    }
+
+                    &:nth-child(2) {
+                        align-items: center;
+                        -webkit-align-items: center;
+                    }
+
+                    svg {
+                        color: $limeGreen;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+
+                    h4 {
+                        text-align: left;
+                        color: $limeGreen;
+
+                        @include query(tablet) {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

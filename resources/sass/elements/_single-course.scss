@@ -1,0 +1,397 @@
+.landing_page {
+
+    main {
+        @include query(mobile) {
+            padding: 40px 0 40px;
+        }
+
+        @include query(smallMobile) {
+            padding: 0;
+        }
+    }
+
+    header {
+        text-align: center;
+
+        &.nav_row {
+            @include query(mobile) {
+                position: relative;
+            }
+        }
+
+        .logo {
+            max-width: 200px;
+            display: inline-block;
+            margin: 0 auto 20px;
+            transition: margin-bottom 500ms linear;
+
+            @include query(mobile) {
+                max-width: 175px;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+
+            @include query(tablet) {
+                font-size: calc(1.8rem + 0.66vw);
+            }
+
+            @include query(mobile) {
+                font-size: 1.4rem;
+                max-width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    main {
+
+        #links_page.live_page {
+
+            .creator_wrap {
+                box-shadow: none;
+                -moz-box-shadow: none;
+                -webkit-box-shadow: none;
+                max-width: unset;
+            }
+        }
+    }
+}
+
+.courses_grid {
+    min-height: 75vh;
+
+    h2.title {
+        text-transform: uppercase;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include query(mobile) {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    .video_viewer {
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        margin-bottom: 40px;
+        text-align:center;
+
+        .video_content {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            display:inline-block;
+        }
+
+        .video_description {
+            text-align:left;
+            padding: 20px;
+        }
+    }
+
+    .my_row.folder {
+        display: none;
+        max-width: 0;
+        transition: all 300ms linear;
+        -webkit-transition: all 300ms linear;
+        border-top-right-radius: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -moz-border-radius-topright: 8px;
+        border-top-left-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -moz-border-radius-topleft: 8px;
+        //grid-column: span 3;
+        //grid-column: 1 / -1;
+
+        .video_wrapper {
+            padding-bottom: 0;
+            transition: all 300ms linear;
+            -webkit-transition: all 300ms linear;
+            height: 0;
+            position: relative;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            max-height: 0;
+            transition: all 300ms linear;
+            -webkit-transition: all 300ms linear;
+            border-top-right-radius: 8px;
+            -webkit-border-top-right-radius: 8px;
+            -moz-border-radius-topright: 8px;
+            border-top-left-radius: 8px;
+            -webkit-border-top-left-radius: 8px;
+            -moz-border-radius-topleft: 8px;
+        }
+
+        &.open {
+            display: block;
+            max-width: 3000px;
+            border: 2px solid $black;
+            max-height: 3000px;
+            opacity: 1;
+
+            iframe {
+                max-height: 1000px;
+            }
+
+            .video_wrapper {
+                padding-bottom: 56.25%;
+            }
+        }
+    }
+
+    .intro_video {
+        max-width: 1000px;
+        margin: 0 auto 40px;
+
+        @include query(smallMobile) {
+            margin: 0 auto;
+        }
+    }
+
+    .intro_text {
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        padding: 20px;
+    }
+
+    .sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        padding: 40px 0;
+        justify-content: center;
+
+        @include query(smallMobile) {
+            padding: 0;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+        }
+
+        section:last-child.image {
+            border-bottom-right-radius: 0 !important;
+            -webkit-border-bottom-right-radius: 0 !important;
+            -moz-border-radius-bottomright:0 !important;
+            border-bottom-left-radius: 0 !important;
+            -webkit-border-bottom-left-radius: 0 !important;
+            -moz-border-radius-bottomleft: 0 !important;
+        }
+
+        .column {
+            padding: 0;
+            position: relative;
+            border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            z-index: 1;
+
+            @include query(smallMobile) {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+            }
+
+            &.file {
+                @include query(smallMobile) {
+                    padding: 20px;
+                }
+            }
+
+            &.text, &.image, &.file {
+                grid-column: 1 / -1;
+            }
+
+            &.text {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+            }
+
+            &.image {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+            }
+
+            .text_wrap {
+                padding: 20px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            &.video {
+                box-shadow: 0 0 20px -2px rgba(155,155,155,.2);
+                -moz-box-shadow: 0 0 20px -2px rgba(155,155,155,.2);
+                -webkit-box-shadow: 0 0 20px -2px rgba(155,155,155,.2);
+                -o-box-shadow: 0 0 20px -2px rgba(155,155,155,.2);
+            }
+
+            .column_title {
+
+                a {
+                    display: inline-block;
+                    color: $black;
+                }
+            }
+
+            .column_image {
+                a {
+                    display: block;
+                }
+            }
+
+            &.video {
+
+                &.open {
+                    border: 2px solid black;
+                }
+
+                .image_wrap {
+                    display: flex;
+                    max-height: 265px;
+                    overflow: hidden;
+                    position: relative;
+
+                    img {
+                        object-fit: cover;
+                        object-position: center;
+                        border-top-right-radius: 8px;
+                        -webkit-border-top-right-radius: 8px;
+                        -moz-border-radius-topright: 8px;
+                        border-top-left-radius: 8px;
+                        -webkit-border-top-left-radius: 8px;
+                        -moz-border-radius-topleft: 8px;
+
+                        &.locked {
+                            filter: blur(25px);
+                        }
+                    }
+
+                    .locked_content {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+                        -ms-flex-wrap: nowrap;
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        -webkit-justify-content: center;
+                        align-items: center;
+                        -webkit-align-items: center;
+
+                        svg {
+                            width: 35px;
+                            height: 35px;
+                            color: $white;
+                            margin-bottom: .5rem;
+                        }
+
+                        p {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#links_page {
+    .content_wrap {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+    }
+
+    .live_page.course {
+        .sections {
+            padding-top: 40px;
+        }
+    }
+}
+
+
+.course_page {
+
+    .container {
+        padding: 0;
+    }
+
+    .page_content {
+        @include boxShadow;
+        float: none;
+        display: inline-block;
+        text-align: initial;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+
+        .nav_row {
+            @include query(mobile) {
+                position: relative;
+            }
+        }
+
+        header {
+            border-top-right-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            border-top-left-radius: 10px;
+            -webkit-border-top-left-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            padding: 10px 20px;
+
+            h2 {
+                font-size: 2rem;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+
+                @include query(mobile) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        main {
+            padding: 2rem;
+
+            .creator_wrap {
+                margin: 0 !important;
+            }
+
+            .courses_grid {
+
+                .sections {
+                    padding: 40px 0 0;
+                }
+
+                h2.title {
+                    font-size: 2.2rem;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

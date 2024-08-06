@@ -1,0 +1,35 @@
+.user_account {
+
+    .column {
+
+        .image_wrap {
+            padding: 20px;
+
+            img {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            svg {
+                color: $hoverBlue;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+            }
+        }
+
+        &.payment {
+            h3 {
+                font-size: 1.4em;
+            }
+
+            span {
+                @include osbold;
+            }
+        }
+    }
+
+    .payout {
+        @include columnStyle;
+    }
+}

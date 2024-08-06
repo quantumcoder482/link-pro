@@ -1,0 +1,70 @@
+// typography baselines and @font face setups
+
+@font-face {
+    font-family: "opensansregular";
+    src: url("/resources//resources/fonts/opensans-regular-webfont.eot"),
+        url("/resources/fonts/opensans-regular-webfont.ttf") format("truetype"),
+        url("/resources/fonts/opensans-regular-webfont.woff") format("woff"),
+        url("/resources/fonts/opensans-regular-webfont.woff2") format("woff2"),
+        url("/resources/fonts/opensans-regular-webfont.svg#opensansregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensansbold";
+    src: url("/resources/fonts/opensans-bold-webfont.eot"),
+        url("/resources/fonts/opensans-bold-webfont.ttf") format("truetype"),
+        url("/resources/fonts/opensans-bold-webfont.woff2") format("woff2"),
+        url("/resources/fonts/opensans-bold-webfont.woff") format("woff"),
+        url("/resources/fonts/opensans-bold-webfont.svg#opensansbold")
+            format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensanssemibold";
+    src: url("/resources/fonts/opensans-semibold-webfont.eot"),
+    url("/resources/fonts/opensans-semibold-webfont.ttf") format("truetype"),
+    url("/resources/fonts/opensans-semibold-webfont.woff2") format("woff2"),
+    url("/resources/fonts/opensans-semibold-webfont.woff") format("woff"),
+    url("/resources/fonts/opensans-semibold-webfont.svg#opensanssemibold")
+    format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensanslight";
+    src: url("/resources/fonts/opensans-light-webfont.eot"),
+        url("/resources/fonts/opensans-light-webfont.ttf") format("truetype"),
+        url("/resources/fonts/opensans-light-webfont.woff2") format("woff2"),
+        url("/resources/fonts/opensans-light-webfont.woff") format("woff"),
+        url("/resources/fonts/opensans-light-webfont.svg#opensanslight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "bebasneue";
+    src: url("/resources/fonts/bebasneue-webfont.eot"),
+    url("/resources/fonts/bebasneue-webfont.ttf") format("truetype"),
+    url("/resources/fonts/bebasneue-webfont.woff2") format("woff2"),
+    url("/resources/fonts/bebasneue-webfont.woff") format("woff"),
+    url("/resources/fonts/bebasneue-webfont.svg#bebasneue") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    @include osbold;
+}
+
+label, button, h5, a {
+    @include ossemibold;
+}
+
+h4, p {
+    @include osregular;
+}

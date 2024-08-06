@@ -1,0 +1,47 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$white: #ffffff;
+$black: #000;
+
+$blue: #424fcf;
+$hoverBlue: #2b37ab;
+$lightBlue: #88c3d7;
+
+$green: #0ba921;
+$hoverGreen: #077216;
+$limeGreen: #2ac77a;
+$hoverLimeGreen: #20965c;
+
+$red: #f24d1d;
+$hoverRed: #c9360c;
+
+$gray: #d4d2d2;
+$darkGray: #545656;
+$lightGray: #f4f4f4;
+$lightGrayAlt: #eaeaea;
+$borderGray: rgba(155, 155, 155, 0.2);
+$grayBlue: #76797b;
+$yellow: #fffde7;
+
+
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$orange: #f6993f;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$bp: (
+    small: 400px,
+    smallMobile: 550px,
+    mobile: 768px,
+    tablet: 992px,
+    desktop: 1199px
+)

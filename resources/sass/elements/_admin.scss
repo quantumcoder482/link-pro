@@ -1,0 +1,199 @@
+#admin_filters {
+    background-color: #000 !important;
+
+    input[type="text"], select {
+        border: 1px solid $gray;
+        border-top-right-radius: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -moz-border-radius-topright: 8px;
+        border-top-left-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -moz-border-radius-topleft: 8px;
+        height: 40px;
+        padding: 10px;
+        background-color: $white;
+        width: 100%;
+    }
+}
+
+.app-container.expanded .content-container .side-menu .navbar-header .navbar-brand .title {
+    color: $black;
+}
+
+.voyager .breadcrumb a {
+    color: $black;
+}
+
+#ref_popup {
+    display: none;
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+#ref_popup.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#ref_popup .content_wrap {
+    max-width: 50%;
+    background: $white;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+#ref_popup .content_wrap h3 {
+    font-size: 30px;
+    color: $black;
+    font-weight: 500;
+}
+
+#ref_popup .content_wrap ul {
+    padding-left: 20px;
+}
+
+#ref_popup .content_wrap li p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+#ref_popup .close_popup {
+    position: absolute;
+    right: 40px;
+    top: 90px;
+    font-size: 30px;
+    color: $white;
+}
+
+#ref_popup .close_popup svg {
+    width: 50px;
+    height: 50px;
+}
+
+.view_users .panel-body p {
+    font-size: 18px;
+}
+
+.view_users .panel-body a {
+    display: inline-block;
+}
+
+.view_users .panel-body a:hover {
+    text-decoration: underline;
+}
+
+.btn.btn-primary, .btn.btn-info {
+    background: $blue !important;
+}
+
+.btn.btn-primary:hover, .btn.btn-info:hover {
+    background: $hoverBlue;
+}
+
+.paginate_button.active a {
+    background-color: $blue !important;
+}
+
+.voyager .side-menu .navbar-header {
+    background: $white;
+}
+
+#admin_filters {
+    padding: 20px 0;
+
+    .column_wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        -webkit-justify-content: flex-start;
+
+        @media all and (max-width: 550px) {
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+        }
+
+        &.filter_by {
+            margin-bottom: 20px;
+        }
+
+        .column {
+            width: 140px;
+            margin-right: 1%;
+
+            @media all and (max-width: 768px) {
+                width: 100%;
+            }
+
+            @media all and (max-width: 550px) {
+                margin-bottom: 10px;
+            }
+
+            &.clear {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .button {
+        display: block;
+        color: $white;
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border: none;
+        text-transform: uppercase;
+
+        @media all and (max-width: 768px) {
+            width: 138px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.blue {
+            background: $blue;
+
+            &:hover {
+                color: $white;
+                background: $hoverBlue;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+.page-content.browse {
+    .panel-body {
+        min-height: 600px;
+    }
+}
+
+

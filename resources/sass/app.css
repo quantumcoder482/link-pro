@@ -1,0 +1,58 @@
+/*
+Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.
+        on line 8 of app.scss
+
+3: 
+4: // Variables
+5: @import './partials/variables';
+6: 
+7: // Bootstrap
+8: @import '~bootstrap/scss/bootstrap';
+9: 
+10: @import './partials/mixins';
+11: @import './partials/typography';
+12: @import './partials/base';
+13: @import './elements/header';
+
+Backtrace:
+app.scss:8
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/bin/sass:23:in `load'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/bin/sass:23:in `<main>'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/matteocirami/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 8 of app.scss\A \A 3: \A 4: // Variables\A 5: @import './partials/variables';\A 6: \A 7: // Bootstrap\A 8: @import '~bootstrap/scss/bootstrap';\A 9: \A 10: @import './partials/mixins';\A 11: @import './partials/typography';\A 12: @import './partials/base';\A 13: @import './elements/header';"; }

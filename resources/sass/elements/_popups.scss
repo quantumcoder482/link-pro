@@ -1,0 +1,520 @@
+#upgrade_popup, #confirm_popup_link, #confirm_cancel_popup, #confirm_folder_popup_link {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    transition: 100ms opacity linear;
+    -webkit-transition: 100ms opacity linear;
+    -moz-transition: 100ms opacity linear;
+    -o-transition: 100ms opacity linear;
+    z-index: 1000;
+
+    &.open {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        opacity: 1;
+    }
+}
+
+#popup_choose_level, #popup_payment_method, #confirm_popup, #upgrade_popup, #confirm_popup_link, #confirm_folder_popup_link, #confirm_cancel_popup, #confirm_change_plan_details, #confirm_cancel_details {
+
+    h2 {
+        @include osbold;
+        font-size: 30px;
+        text-align: center;
+
+        @media all and (max-width: 768px) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 550px) {
+            font-size: 22px;
+        }
+    }
+
+    h3:not(.price) {
+        @include ossemibold;
+        font-size: 18px;
+        line-height: 1.6;
+
+        @media all and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+
+        @media all and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    .icon_wrap {
+        width: 50px;
+        margin: 0 auto 20px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &.check {
+            color: $green;
+        }
+
+        &.blue_icon {
+            color: $blue;
+        }
+    }
+
+    .box {
+        @include boxShadow;
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        background: $white;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+
+        @media all and (max-width: 1199px) {
+            max-width: 60%;
+            max-height: 750px;
+        }
+
+        @media screen and (max-width: 992px) {
+            overflow-y: scroll;
+            max-height: calc(100vh - 80px);
+            max-width: 75%;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 20px;
+            max-height: 650px;
+            max-width: 85%;
+        }
+
+        @media all and (max-width: 550px) {
+            max-height: unset;
+            max-width: unset;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            height: 100%;
+        }
+
+        form {
+
+            label {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            select {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        .text_wrap {
+            text-align: center;
+            padding: 20px 20px 30px;
+            margin-top: 20px;
+
+            @media screen and (max-width: 768px) {
+                padding: 0;
+            }
+
+            .confirm_text {
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .button_row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            justify-content: center;
+            -webkit-justify-content: center;
+            gap: 20px;
+            column-gap: 20px;
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+        }
+
+        .button.confirm_change_plan, button.black_gradient {
+            width: auto;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+#upgrade_popup {
+
+    .close_popup {
+        position: absolute;
+        right: 3%;
+        top: 4%;
+        width: 40px;
+        height: 40px;
+        color: $white;
+        z-index: 9999;
+
+        @media all and (max-width: 550px) {
+            right: 25px;
+            width: 30px;
+            height: 30px;
+            color: $black;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#popup_payment_method, #payment-form {
+    max-width: 700px;
+    margin: 0 auto;
+
+    .braintree-heading {
+        width: 100%;
+        text-align: left;
+    }
+
+    .bt-drop-in-wrapper {
+
+        .braintree-options-list {
+            text-align: left;
+        }
+
+        .braintree-sheet__content--form .braintree-form__field-group {
+            position: relative;
+
+            .braintree-form__label {
+                font-size: 12px;
+                color: rgba(155, 155, 155, 0.6);
+                position: absolute;
+                top: -5px;
+                left: 15px;
+                background: $white;
+                z-index: 1;
+            }
+
+            .braintree-form__hosted-field {
+                border: 1px solid $borderGray;
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+            }
+        }
+    }
+
+    .box {
+        max-width: 700px;
+
+        @media all and (max-width: 1199px) {
+            max-width: 75%;
+        }
+
+        @media all and (max-width: 550px) {
+            max-width: unset;
+        }
+    }
+}
+
+#popup_choose_level {
+    .box {
+        transition: max-height .2s ease-in-out;
+        -webkit-transition: max-height .2s ease-in-out;
+
+        &.size_adjust {
+            max-height: 450px;
+
+            &.adjust_overflow {
+                overflow-y: hidden;
+            }
+
+            .three_columns {
+                max-height: 300px;
+                overflow-y: hidden;
+            }
+
+            @media all and (max-width: 550px) {
+                max-height: 500px;
+            }
+        }
+    }
+
+    .form_page.plans {
+
+        .my_row.three_columns {
+
+            @media all and (max-width: 992px) {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+            }
+
+            @media all and (max-width: 768px) {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+            }
+
+            @media all and (max-width: 550px) {
+                grid-template-columns: repeat(1, auto);
+            }
+
+            &.two_columns {
+
+                .column {
+
+                    @media all and (max-width: 992px) {
+                        margin: 0 auto 20px;
+                    }
+
+                    /*@media all and (max-width: 550px) {
+                        min-width: 100%;
+                    }*/
+
+                    h2 {
+                        margin-bottom: 10px;
+                        padding-bottom: 10px;
+                    }
+
+                    .pricing {
+                        margin: 15px 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#confirm_change_plan_details, #confirm_cancel_details {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align:center;
+    transition: .4s all ease-in-out;
+    -webkit-transition: .4s all ease-in-out;
+    padding-top: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+
+    form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        align-items: center;
+        -webkit-align-items: center;
+        padding: 20px;
+
+        h3 {
+            @include ossemibold;
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+
+            @media all and (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 18px;
+
+            @media all and (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .button_row {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            justify-content:center;
+            -webkit-justify-content: center;
+            align-items: center;
+            -webkit-align-items: center;
+        }
+
+        .button, button {
+            width: 150px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @media all and (max-width: 768px) {
+                width: 138px;
+            }
+
+            &.gray {
+                border: 1px solid $darkGray;
+            }
+        }
+    }
+}
+
+#upgrade_popup, #confirm_popup_link, #confirm_cancel_popup, #confirm_folder_popup_link {
+
+    .close_popup {
+        @media all and (max-width: 550px) {
+            color: $white;
+        }
+    }
+    .box {
+        max-width: 550px;
+
+        @media screen and (max-width: 768px) {
+            max-width: 90%;
+        }
+
+        @media all and (max-width: 992px) {
+            overflow: hidden;
+        }
+
+        @media all and (max-width: 550px) {
+            max-width: 80%;
+            padding: 20px;
+            height: auto;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+        }
+    }
+}
+
+#confirm_cancel_popup {
+
+    .box {
+        max-width: 800px;
+
+        @media screen and (max-width: 992px) {
+            max-width: 80%;
+        }
+
+        @media all and (max-width: 550px) {
+            height: auto;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .button:first-child {
+            margin-right: 20px;
+        }
+
+        .button:last-child {
+            color: $black;
+        }
+    }
+}
+
+#confirm_popup_link, #confirm_folder_popup_link {
+    .button_row {
+        a.button:first-child {
+            margin-right: 5%;
+        }
+    }
+}
+
+.plans .card, .course_creator .card {
+    transition: 1000ms max-width ease-in-out;
+
+    &.active {
+        max-width: 600px;
+    }
+}
+
+.form_icon_wrap {
+    width: 100%;
+    text-align: center;
+
+    &.svg {
+        svg {
+            margin: 0 auto;
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    &.image {
+        max-width: 50px;
+        margin: 0 auto;
+    }
+
+    &.check {
+        color: $green;
+    }
+
+    &.blue_icon {
+        color: $blue;
+    }
+}

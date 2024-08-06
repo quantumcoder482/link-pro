@@ -1,0 +1,179 @@
+.icon_wrap.folder {
+
+    .inner_icon_wrap {
+        border: 1px solid $blue;
+        border-radius: 20%;
+        -webkit-border-radius: 20%;
+        -moz-border-radius: 20%;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                background: rgba(0,0,0,.7);
+                background-image: url('../../../public/images/icon-placeholder-hover.png');
+                background-size: contain;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.folder_name {
+    margin: 10px 0;
+
+    input {
+        width: 100%;
+    }
+}
+
+.my_row.folder {
+    opacity: 0;
+    max-height: 0;
+    -webkit-transition: max-height 50ms linear;
+    -moz-transition: max-height  50ms linear;
+    -o-transition: max-height  50ms linear;
+    transition: max-height 50ms linear;
+    background: $white;
+    z-index: -999;
+
+    &.open {
+        max-height: 1000px;
+        z-index: unset;
+        animation: opacity 50ms forwards;
+
+        &.shop {
+            max-height: unset;
+        }
+    }
+
+    @keyframes opacity {
+        0% {opacity: 0;}
+        20% { opacity: .3;}
+        40% { opacity: .5;}
+        60% { opacity: .7;}
+        80% { opacity: .9;}
+        100% { opacity: 1;}
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .icons_wrap, .folder_content {
+        padding: 20px !important;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 550px) {
+            padding: 10px !important;
+        }
+
+        &.description {
+            text-align: unset;
+        }
+
+        .icon_col {
+            width: 26.3% !important;
+            margin-bottom: 5px !important;
+            margin-right: 10.5% !important;
+
+            &:nth-child(3n) {
+                margin-right: 0 !important;
+            }
+
+            &:nth-child(4n) {
+                margin-right: 10.5% !important;
+            }
+        }
+    }
+
+    form {
+        margin-bottom: 0;
+
+        h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 550px) {
+                font-size: .8em;
+            }
+        }
+        input {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .button {
+            -webkit-appearance: none;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+.icon_links {
+    padding: 0 5%;
+    margin-bottom: 10px;
+
+    .links_row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        align-items: center;
+        -webkit-align-items: center;
+        position: relative;
+
+        .breadcrumb_links {
+            a {
+                @include ossemibold;
+                font-size: 15px;
+                margin-right: auto;
+                color: $blue;
+
+                &:first-child {
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+
+    p.form_title {
+        @include osbold;
+        color: $blue;
+        font-size: 20px;
+        text-align: center;
+        margin: 0 0 10px;
+        border-bottom: 2px solid $blue;
+    }
+
+    .back {
+        float: left;
+
+        svg {
+            float: left;
+            width: 18px;
+            height: 24px;
+        }
+    }
+}
